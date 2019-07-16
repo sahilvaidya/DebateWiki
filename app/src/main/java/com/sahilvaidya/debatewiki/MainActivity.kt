@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         webView.webChromeClient = object : WebChromeClient(){}
 
         webView.setDownloadListener { url, userAgent, contentDisposition, mimetype, contentLength ->
-            //getting file name from url.
+            //getting file name from url
             val filename = URLUtil.guessFileName(url, contentDisposition, mimetype)
             //Alertdialog
             val builder = AlertDialog.Builder(this@MainActivity)
